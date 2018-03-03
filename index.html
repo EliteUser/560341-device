@@ -9,9 +9,10 @@
 <body>
 
   <!-- Хедер -->
+
   <header class="page-header page-header-main container">
-    <nav class="page-navigation">
-      <a class="page-header-logo">DEVICE</a>
+
+    <div class="header-top">
 
       <form class="page-search">
         <label class="search-icon" for="search">Поиск по сайту</label>
@@ -19,7 +20,23 @@
         <button class="search-btn" type="submit">Найти</button>
       </form>
 
-      <section class="page-catalog">
+      <ul class="user-navigation">
+        <li>
+          <a class="login-btn" href="#">Войти</a>
+        </li>
+      </ul>
+      <p class="compare">
+        <a href="#">Сравнить</a>
+      </p>
+      <p class="cart">
+        <a href="#">Корзина</a>
+      </p>
+    </div>
+
+    <nav class="page-navigation">
+      <a class="page-header-logo">DEVICE</a>
+
+      <article class="page-catalog">
         <a class="catalog-header" href="#">
           <h2>Каталог товаров</h2>
         </a>
@@ -31,7 +48,7 @@
           <li><a href="#">Умные часы</a></li>
           <li><a href="#">Квадрокоптеры</a></li>
         </ul>
-      </section>
+      </article>
 
       <ul class="services-list">
         <li>
@@ -46,25 +63,11 @@
       </ul>
     </nav>
 
-    <div class="wrapper">
-      <ul class="user-navigation">
-        <li>
-          <a class="login-btn" href="#">Войти</a>
-        </li>
-      </ul>
-      <p class="compare">
-        <a href="#">Сравнить</a>
-      </p>
-      <p class="cart">
-        <a href="#">Корзина</a>
-      </p>
-    </div>
-
   </header>
 
   <!-- Основная часть (контент) -->
 
-  <main>
+  <main class="index-page">
 
     <h1 class="visually-hidden">DEVICE - интернет-магазин крутых гаджетов</h1>
 
@@ -241,43 +244,45 @@
 
     <!-- Логотипы компаний -->
 
-    <section class="logotypes container">
-      <h2 class="visually-hidden">Логотипы компаний</h2>
+    <section class="logotypes">
+      <div class="container">
+        <h2 class="visually-hidden">Логотипы компаний</h2>
 
-      <ul class="logotypes-list">
-        <li class="company-logo">
-          <a href="#">
+        <ul class="logotypes-list">
+          <li class="company-logo">
+            <a href="#">
           <img src="" alt="DJI" width="260" height="100">
           DJI
         </a>
-        </li>
+          </li>
 
-        <li class="company-logo">
-          <a href="#">
+          <li class="company-logo">
+            <a href="#">
           <img src="" alt="SP Gadgets" width="260" height="100">
           SP Gadgets
         </a>
-        </li>
+          </li>
 
-        <li class="company-logo">
-          <a href="#">
+          <li class="company-logo">
+            <a href="#">
           <img src="" alt="GoPro" width="260" height="100">
           GoPro
         </a>
-        </li>
+          </li>
 
-        <li class="company-logo">
-          <a href="#">
+          <li class="company-logo">
+            <a href="#">
           <img src="" alt="VIVE" width="260" height="100">
           VIVE
         </a>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- О нас -->
 
-    <div class="container container-half">
+    <div class="container">
       <section class="about-us">
         <h2 class="about-us-header">О нас</h2>
         <p class="about-us-description">
@@ -310,56 +315,59 @@
 
   <!-- Футер -->
 
-  <footer class="page-footer container">
+  <footer class="page-footer">
+    <div class="container">
 
-    <div class="footer-top">
-      <h2 class="footer-logo">DEVICE</h2>
-      <div class="wrapper">
-        <ul class="user-navigation">
+      <article class="footer-top">
+        <h2 class="footer-logo">DEVICE</h2>
+        <div class="wrapper">
+          <ul class="user-navigation">
+            <li>
+              <a class="login-btn" href="#">Войти</a>
+            </li>
+          </ul>
+          <p class="compare">
+            <a href="#">Сравнить</a>
+          </p>
+          <p class="cart">
+            <a href="#">Корзина</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="footer-middle">
+        <address class="address">г. Москва, ул. Строителей, 15</address>
+        <ul class="services-list">
           <li>
-            <a class="login-btn" href="#">Войти</a>
+            <a href="#">Доставка</a>
+          </li>
+          <li>
+            <a href="#">Гарантия</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
           </li>
         </ul>
-        <p class="compare">
-          <a href="#">Сравнить</a>
-        </p>
-        <p class="cart">
-          <a href="#">Корзина</a>
-        </p>
-      </div>
-    </div>
+        <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
+      </article>
 
-    <div class="footer-middle">
-      <address class="address">г. Москва, ул. Строителей, 15</address>
-      <ul class="services-list">
-        <li>
-          <a href="#">Доставка</a>
-        </li>
-        <li>
-          <a href="#">Гарантия</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-      <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
-    </div>
+      <article class="footer-bottom">
+        <ul class="footer-social">
+          <li>
+            <a class="social-btn social-fb" href="#">Facebook</a>
+          </li>
+          <li>
+            <a class="social-btn social-in" href="#">Instagram</a>
+          </li>
+          <li>
+            <a class="social-btn social-tw" href="#">Twitter</a>
+          </li>
+        </ul>
+        <div class="footer-copyright">
+          <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1</a>
+        </div>
+      </article>
 
-    <div class="footer-bottom">
-      <ul class="footer-social">
-        <li>
-          <a class="social-btn social-fb" href="#">Facebook</a>
-        </li>
-        <li>
-          <a class="social-btn social-in" href="#">Instagram</a>
-        </li>
-        <li>
-          <a class="social-btn social-tw" href="#">Twitter</a>
-        </li>
-      </ul>
-      <div class="footer-copyright">
-        <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1</a>
-      </div>
     </div>
   </footer>
 

@@ -11,14 +11,33 @@
   <!-- Хедер -->
 
   <header class="page-header container">
-    <nav class="page-navigation">
-      <a class="page-header-logo" href="index.html">DEVICE</a>
+
+    <div class="header-top">
 
       <form class="page-search">
         <label class="search-icon" for="search">Поиск по сайту</label>
         <input class="search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <button class="search-btn" type="submit">Найти</button>
       </form>
+
+      <ul class="user-navigation">
+        <li>
+          <a class="user-name" href="#">Валентин Петухов</a>
+        </li>
+        <li>
+          <a class="logout-btn" href="#">Выйти</a>
+        </li>
+      </ul>
+      <p class="compare">
+        <a href="#">Сравнить</a>
+      </p>
+      <p class="cart">
+        <a href="#">Корзина</a>
+      </p>
+    </div>
+
+    <nav class="page-navigation">
+      <a class="page-header-logo" href="index.html">DEVICE</a>
 
       <section class="page-catalog">
         <a class="catalog-header" href="#">
@@ -47,23 +66,6 @@
       </ul>
     </nav>
 
-    <div class="wrapper">
-      <ul class="user-navigation">
-        <li>
-          <a class="user-name" href="#">Валентин Петухов</a>
-        </li>
-        <li>
-          <a class="logout-btn" href="#">Выйти</a>
-        </li>
-      </ul>
-      <p class="compare">
-        <a href="#">Сравнить</a>
-      </p>
-      <p class="cart">
-        <a href="#">Корзина</a>
-      </p>
-    </div>
-
   </header>
 
   <!-- Основная часть (контент) -->
@@ -72,7 +74,7 @@
 
     <!-- Заголовок и навигация -->
 
-    <div class="container">
+    <div class="catalog-page-header container">
       <h1 class="main-page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li>
@@ -85,35 +87,12 @@
       </ul>
     </div>
 
-    <!-- Сортировка -->
-
-    <section class="sort">
-      <b class="sort-header">Сортировка:</b>
-      <ul class="sort-options">
-        <li class="sort-option-active">
-          <a href="#">По цене</a>
-        </li>
-        <li>
-          <a href="#">По типу</a>
-        </li>
-        <li>
-          <a href="#">По популярности</a>
-        </li>
-      </ul>
-      <ul class="sort-direction">
-        <li>
-          <a href="#">По возрастанию</a>
-        </li>
-        <li class="sort-direction-active">
-          <a href="#">По убыванию</a>
-        </li>
-      </ul>
-    </section>
-
     <!-- Фильтр -->
 
     <section class="filter">
-      <b class="filter-header">Фильтр:</b>
+      <div class="filter-header">
+        <b>Фильтр:</b>
+      </div>
       <form action="#">
         <div class="filter-price">
           <b>Стоимость</b>
@@ -160,6 +139,32 @@
     <!-- Каталог с товарами -->
 
     <section class="catalog">
+
+      <!-- Сортировка -->
+
+      <article class="sort">
+        <b class="sort-header">Сортировка:</b>
+        <ul class="sort-options">
+          <li class="sort-option-active">
+            <a href="#">По цене</a>
+          </li>
+          <li>
+            <a href="#">По типу</a>
+          </li>
+          <li>
+            <a href="#">По популярности</a>
+          </li>
+        </ul>
+        <ul class="sort-direction">
+          <li>
+            <a href="#">По возрастанию</a>
+          </li>
+          <li class="sort-direction-active">
+            <a href="#">По убыванию</a>
+          </li>
+        </ul>
+      </article>
+
       <ul class="catalog-list">
         <li class="catalog-item">
           <div class="catalog-item-image">
@@ -249,66 +254,71 @@
           <a class="paginator-btn" href="#">Вперед</a>
         </li>
       </ul>
+      
     </section>
   </main>
 
   <!-- Футер -->
 
-  <footer class="page-footer container">
+  <footer class="page-footer">
+    <div class="container">
 
-    <div class="footer-top">
-      <h2 class="footer-logo">DEVICE</h2>
-      <div class="wrapper">
-        <ul class="user-navigation">
+      <article class="footer-top">
+        <h2 class="footer-logo">DEVICE</h2>
+        <div class="wrapper">
+          <ul class="user-navigation">
+            <li>
+              <a class="user-name" href="#">Валентин Петухов</a>
+            </li>
+            <li>
+              <a class="logout-btn" href="#">Выйти</a>
+            </li>
+          </ul>
+          <p class="compare">
+            <a href="#">Сравнить</a>
+          </p>
+          <p class="cart">
+            <a href="#">Корзина</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="footer-middle">
+        <address class="address">г. Москва, ул. Строителей, 15</address>
+        <ul class="services-list">
           <li>
-            <a class="user-name" href="#">Валентин Петухов</a>
+            <a href="#">Доставка</a>
           </li>
           <li>
-            <a class="logout-btn" href="#">Выйти</a>
+            <a href="#">Гарантия</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
           </li>
         </ul>
-        <p class="compare">
-          <a href="#">Сравнить</a>
-        </p>
-        <p class="cart">
-          <a href="#">Корзина</a>
-        </p>
-      </div>
-    </div>
+        <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
+      </article>
 
-    <div class="footer-middle">
-      <p class="address">г. Москва, ул. Строителей, 15</p>
-      <ul class="services-list">
-        <li>
-          <a href="#">Доставка</a>
-        </li>
-        <li>
-          <a href="#">Гарантия</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-      <p class="telephone">Тел.: +7 (495) 495-95-95</p>
-    </div>
+      <article class="footer-bottom">
+        <ul class="footer-social">
+          <li>
+            <a class="social-btn social-fb" href="#">Facebook</a>
+          </li>
+          <li>
+            <a class="social-btn social-in" href="#">Instagram</a>
+          </li>
+          <li>
+            <a class="social-btn social-tw" href="#">Twitter</a>
+          </li>
+        </ul>
+        <div class="footer-copyright">
+          <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1</a>
+        </div>
+      </article>
 
-    <div class="footer-bottom">
-      <ul class="footer-social">
-        <li>
-          <a class="social-btn social-fb" href="#">Facebook</a>
-        </li>
-        <li>
-          <a class="social-btn social-in" href="#">Instagram</a>
-        </li>
-        <li>
-          <a class="social-btn social-tw" href="#">Twitter</a>
-        </li>
-      </ul>
-      <div class="footer-copyright">
-        <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1</a>
-      </div>
     </div>
   </footer>
+
 
 </body>
 
