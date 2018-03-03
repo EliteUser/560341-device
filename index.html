@@ -9,7 +9,6 @@
 <body>
 
   <!-- Хедер -->
-
   <header class="page-header page-header-main container">
     <nav class="page-navigation">
       <a class="page-header-logo">DEVICE</a>
@@ -19,39 +18,20 @@
         <input class="search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <button class="search-btn" type="submit">Найти</button>
       </form>
-      <div class="wrapper">
-        <ul class="user-navigation">
-          <li>
-            <a class="login-btn" href="#">Войти</a>
-          </li>
+
+      <section class="page-catalog">
+        <a class="catalog-header" href="#">
+          <h2>Каталог товаров</h2>
+        </a>
+        <ul class="catalog-list">
+          <li><a href="#">Виртуальная реальность</a></li>
+          <li><a href="catalog.html">Моноподы для селфи</a></li>
+          <li><a href="#">Экшн-камеры</a></li>
+          <li><a href="#">Фитнес-браслеты</a></li>
+          <li><a href="#">Умные часы</a></li>
+          <li><a href="#">Квадрокоптеры</a></li>
         </ul>
-        <p class="compare">
-          <a href="#">Сравнить</a>
-        </p>
-        <p class="cart">
-          <a href="#">Корзина</a>
-        </p>
-      </div>
-
-      <ul class="catalog">
-        <li>
-          <a href="#">Каталог товаров</a>
-          <ul class="catalog-part">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-          </ul>
-
-          <ul class="catalog-part">
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-          </ul>
-
-          <ul class="catalog-part">
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-      </ul>
+      </section>
 
       <ul class="services-list">
         <li>
@@ -65,6 +45,21 @@
         </li>
       </ul>
     </nav>
+
+    <div class="wrapper">
+      <ul class="user-navigation">
+        <li>
+          <a class="login-btn" href="#">Войти</a>
+        </li>
+      </ul>
+      <p class="compare">
+        <a href="#">Сравнить</a>
+      </p>
+      <p class="cart">
+        <a href="#">Корзина</a>
+      </p>
+    </div>
+
   </header>
 
   <!-- Основная часть (контент) -->
@@ -82,9 +77,9 @@
       <input type="radio" id="slider-btn-2" name="slider-toggle">
       <input type="radio" id="slider-btn-3" name="slider-toggle">
       <div class="slider-controls">
-        <label for="slider-btn-1"></label>
-        <label for="slider-btn-2"></label>
-        <label for="slider-btn-3"></label>
+        <label class="main-slider-btn" for="slider-btn-1"></label>
+        <label class="main-slider-btn" for="slider-btn-2"></label>
+        <label class="main-slider-btn" for="slider-btn-3"></label>
       </div>
 
       <ul class="slider-slides">
@@ -219,9 +214,9 @@
         <input type="radio" id="services-btn-2" name="services-toggle">
         <input type="radio" id="services-btn-3" name="services-toggle">
         <div class="services-controls">
-          <label for="services-btn-1"></label>
-          <label for="services-btn-2"></label>
-          <label for="services-btn-3"></label>
+          <label class="btn services-btn" for="services-btn-1">Доставка</label>
+          <label class="btn services-btn" for="services-btn-2">Гарантия</label>
+          <label class="btn services-btn" for="services-btn-3">Кредит</label>
         </div>
 
         <ul class="services-slides">
@@ -335,7 +330,7 @@
     </div>
 
     <div class="footer-middle">
-      <p class="address">г. Москва, ул. Строителей, 15</p>
+      <address class="address">г. Москва, ул. Строителей, 15</address>
       <ul class="services-list">
         <li>
           <a href="#">Доставка</a>
@@ -347,7 +342,7 @@
           <a href="#">Контакты</a>
         </li>
       </ul>
-      <p class="telephone">Тел.: +7 (495) 495-95-95</p>
+      <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
     </div>
 
     <div class="footer-bottom">
@@ -382,8 +377,10 @@
         <label class="popup-label" for="popup-email">Ваш e-mail:</label>
         <input type="email" name="popup-email" id="popup-email" placeholder="email@example.com" required>
       </p>
-      <label class="popup-label" for="popup-textarea">Текст письма:</label>
-      <textarea name="popup-textarea" id="popup-textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      <p class="user-message">
+        <label class="popup-label" for="popup-textarea">Текст письма:</label>
+        <textarea name="popup-textarea" id="popup-textarea" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
       <button class="btn popup-btn" type="submit">Отправить</button>
     </form>
   </section>

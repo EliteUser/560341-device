@@ -19,42 +19,20 @@
         <input class="search-field" type="search" name="search" id="search" placeholder="Поиск по сайту">
         <button class="search-btn" type="submit">Найти</button>
       </form>
-      <div class="wrapper">
-        <ul class="user-navigation">
-          <li>
-            <a class="user-name" href="#">Валентин Петухов</a>
-          </li>
-          <li>
-            <a class="logout-btn" href="#">Выйти</a>
-          </li>
+
+      <section class="page-catalog">
+        <a class="catalog-header" href="#">
+          <h2>Каталог товаров</h2>
+        </a>
+        <ul class="catalog-list">
+          <li><a href="#">Виртуальная реальность</a></li>
+          <li><a href="catalog.html">Моноподы для селфи</a></li>
+          <li><a href="#">Экшн-камеры</a></li>
+          <li><a href="#">Фитнес-браслеты</a></li>
+          <li><a href="#">Умные часы</a></li>
+          <li><a href="#">Квадрокоптеры</a></li>
         </ul>
-        <p class="compare">
-          <a href="#">Сравнить</a>
-        </p>
-        <p class="cart">
-          <a href="#">Корзина</a>
-        </p>
-      </div>
-
-      <ul class="catalog">
-        <li>
-          <a href="#">Каталог товаров</a>
-          <ul class="catalog-part">
-            <li><a href="#">Виртуальная реальность</a></li>
-            <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
-          </ul>
-
-          <ul class="catalog-part">
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
-          </ul>
-
-          <ul class="catalog-part">
-            <li><a href="#">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-      </ul>
+      </section>
 
       <ul class="services-list">
         <li>
@@ -68,16 +46,34 @@
         </li>
       </ul>
     </nav>
+
+    <div class="wrapper">
+      <ul class="user-navigation">
+        <li>
+          <a class="user-name" href="#">Валентин Петухов</a>
+        </li>
+        <li>
+          <a class="logout-btn" href="#">Выйти</a>
+        </li>
+      </ul>
+      <p class="compare">
+        <a href="#">Сравнить</a>
+      </p>
+      <p class="cart">
+        <a href="#">Корзина</a>
+      </p>
+    </div>
+
   </header>
 
   <!-- Основная часть (контент) -->
 
-  <main>
+  <main class="catalog-page">
 
     <!-- Заголовок и навигация -->
 
     <div class="container">
-      <h1 class="page-header">Моноподы для селфи</h1>
+      <h1 class="main-page-title">Моноподы для селфи</h1>
       <ul class="breadcrumbs">
         <li>
           <a href="index.html">Главная</a>
@@ -92,7 +88,7 @@
     <!-- Сортировка -->
 
     <section class="sort">
-      <h2 class="sort-header">Сортировка:</h2>
+      <b class="sort-header">Сортировка:</b>
       <ul class="sort-options">
         <li class="sort-option-active">
           <a href="#">По цене</a>
@@ -117,7 +113,7 @@
     <!-- Фильтр -->
 
     <section class="filter">
-      <h2 class="filter-header">Фильтр:</h2>
+      <b class="filter-header">Фильтр:</b>
       <form action="#">
         <div class="filter-price">
           <b>Стоимость</b>
@@ -217,7 +213,7 @@
         </li>
 
         <li class="catalog-item">
-          <div class="catalog-item-image">
+          <div class="catalog-item-image item-new">
             <img src="img/product-4.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
             <div class="catalog-item-hover">
               <a class="btn add-to-card-btn" href="#">В корзину</a>
