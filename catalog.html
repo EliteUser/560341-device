@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>DEVICE</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -142,27 +143,28 @@
   <main class="catalog-page">
 
     <!-- Заголовок и навигация -->
-
-    <div class="catalog-page-header container">
-      <h1 class="main-page-title">Моноподы для селфи</h1>
-      <ul class="breadcrumbs">
-        <li>
-          <a href="index.html">Главная</a>
-        </li>
-        <li>
-          <a href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
-      </ul>
+    <div class="container">
+      <div class="catalog-page-header">
+        <h1 class="catalog-page-title">Моноподы для селфи</h1>
+        <ul class="breadcrumbs">
+          <li>
+            <a href="index.html">Главная</a>
+          </li>
+          <li>
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="breadcrumbs-current">Моноподы для селфи</li>
+        </ul>
+      </div>
     </div>
 
     <!-- Фильтр -->
-    <div class="container">
+    <div class="container main-catalog-box">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <p class="filter-header">Фильтр:</p>
 
-        <form class="filter-form" method="post" action="https://echo.htmlacademy.ru">
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
           <div class="filter-price">
             <b>Стоимость</b>
             <!-- Ползунок -->
@@ -172,23 +174,23 @@
             <legend>Цвет</legend>
             <ul class="filter-color-list">
               <li>
-                <input class="visually-hidden filter-color-input" type="checkbox" name="black" id="filter-black">
+                <input class="filter-color-input" type="checkbox" name="black" id="filter-black">
                 <label for="filter-black">Черный</label>
               </li>
               <li>
-                <input class="visually-hidden filter-color-input" type="checkbox" name="white" id="filter-white">
+                <input class="filter-color-input" type="checkbox" name="white" id="filter-white">
                 <label for="filter-white">Белый</label>
               </li>
               <li>
-                <input class="visually-hidden filter-color-input" type="checkbox" name="blue" id="filter-blue">
+                <input class="filter-color-input" type="checkbox" name="blue" id="filter-blue">
                 <label for="filter-blue">Синий</label>
               </li>
               <li>
-                <input class="visually-hidden filter-color-input" type="checkbox" name="red" id="filter-red">
+                <input class="filter-color-input" type="checkbox" name="red" id="filter-red">
                 <label for="filter-red">Красный</label>
               </li>
               <li>
-                <input class="visually-hidden filter-color-input" type="checkbox" name="pink" id="filter-pink">
+                <input class="filter-color-input" type="checkbox" name="pink" id="filter-pink">
                 <label for="filter-pink">Розовый</label>
               </li>
             </ul>
@@ -225,21 +227,21 @@
           <b class="sort-header">Сортировка:</b>
           <ul class="sort-options">
             <li class="sort-option-active">
-              <a href="#">По цене</a>
+              <button type="button">По цене</button>
             </li>
             <li>
-              <a href="#">По типу</a>
+              <button type="button">По типу</button>
             </li>
             <li>
-              <a href="#">По популярности</a>
+              <button type="button">По популярности</button>
             </li>
           </ul>
           <ul class="sort-direction">
             <li>
-              <a href="#">По возрастанию</a>
+              <button type="button" aria-label="По возрастанию"></button>
             </li>
             <li class="sort-direction-active">
-              <a href="#">По убыванию</a>
+              <button type="button" aria-label="По убыванию"></button>
             </li>
           </ul>
         </article>
@@ -399,29 +401,23 @@
         <ul class="footer-social">
           <li>
             <a class="social-btn social-fb" href="#" aria-label="Facebook">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#fb-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#fb-icon"/>
+              </svg>              
             </a>
           </li>
           <li>
             <a class="social-btn social-in" href="#" aria-label="Instagram">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#in-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#in-icon"/>
+              </svg>              
             </a>
           </li>
           <li>
             <a class="social-btn social-tw" href="#" aria-label="Twitter">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#tw-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#tw-icon"/>
+              </svg>              
             </a>
           </li>
         </ul>

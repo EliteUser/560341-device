@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>DEVICE</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -168,9 +169,9 @@
     <section class="main-slider container">
       <h2 class="visually-hidden">Слайдер с товарами</h2>
 
-      <input class="visually-hidden" type="radio" id="slider-btn-1" name="slider-toggle" checked>
-      <input class="visually-hidden" type="radio" id="slider-btn-2" name="slider-toggle">
-      <input class="visually-hidden" type="radio" id="slider-btn-3" name="slider-toggle">
+      <input type="radio" id="slider-btn-1" name="slider-toggle" checked>
+      <input type="radio" id="slider-btn-2" name="slider-toggle">
+      <input type="radio" id="slider-btn-3" name="slider-toggle">
       <div class="slider-controls">
         <label class="main-slider-btn" for="slider-btn-1"></label>
         <label class="main-slider-btn" for="slider-btn-2"></label>
@@ -333,9 +334,9 @@
       <h2 class="visually-hidden">Услуги</h2>
       <div class="container">
 
-        <input class="visually-hidden" type="radio" id="services-btn-1" name="services-toggle" checked>
-        <input class="visually-hidden" type="radio" id="services-btn-2" name="services-toggle">
-        <input class="visually-hidden" type="radio" id="services-btn-3" name="services-toggle">
+        <input type="radio" id="services-btn-1" name="services-toggle" checked>
+        <input type="radio" id="services-btn-2" name="services-toggle">
+        <input type="radio" id="services-btn-3" name="services-toggle">
         <div class="services-controls">
           <label class="btn services-btn" for="services-btn-1" tabindex="0">Доставка</label>
           <label class="btn services-btn" for="services-btn-2" tabindex="0">Гарантия</label>
@@ -490,29 +491,23 @@
         <ul class="footer-social">
           <li>
             <a class="social-btn social-fb" href="#" aria-label="Facebook">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#fb-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#fb-icon"/>
+              </svg>              
             </a>
           </li>
           <li>
             <a class="social-btn social-in" href="#" aria-label="Instagram">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#in-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#in-icon"/>
+              </svg>              
             </a>
           </li>
           <li>
             <a class="social-btn social-tw" href="#" aria-label="Twitter">
-              <span class="social-icon">
-                <svg>
-                  <use xlink:href="#tw-icon"/>
-                </svg>
-              </span>
+              <svg>
+                <use xlink:href="#tw-icon"/>
+              </svg>              
             </a>
           </li>
         </ul>
