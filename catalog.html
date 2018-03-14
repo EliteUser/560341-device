@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>DEVICE</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -56,7 +57,6 @@
      
   </svg>
 
-
   <!-- Хедер -->
 
   <div class="container">
@@ -67,10 +67,10 @@
         <form class="page-search" method="post" action="https://echo.htmlacademy.ru">
           <label class="search-icon" for="search-field" aria-label="Поиск по сайту"></label>
           <input class="search-field" type="search" name="search-query" id="search-field" placeholder="Поиск по сайту">
-          <button class="search-btn" type="submit">Найти</button>
+          <button class="search-btn" type="submit" tabindex="-1">Найти</button>
         </form>
 
-        <div class="flex-wrap">
+        <div class="user-box">
           <ul class="user-navigation">
             <li>
               <a class="user-name" href="#">
@@ -104,7 +104,7 @@
       </div>
 
       <nav class="page-navigation">
-        <a class="page-header-logo" href="index.html" tabindex="1" aria-label="Перейти на главную">DEVICE</a>
+        <a class="page-header-logo logo-active" href="index.html" tabindex="1" aria-label="Перейти на главную">DEVICE</a>
 
         <article class="page-catalog">
           <div class="catalog-box">
@@ -153,7 +153,9 @@
           <li>
             <a href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="breadcrumbs-current">Моноподы для селфи</li>
+          <li>
+            <a class="breadcrumbs-current">Моноподы для селфи</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -198,7 +200,7 @@
 
           <fieldset class="filter-bluetooth">
             <legend>Bluetooth</legend>
-            <ul>
+            <ul class="filter-bluetooth-list">
               <li>
                 <input class="visually-hidden filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth-true" value="true">
                 <label for="bluetooth-true">Есть</label>
@@ -225,23 +227,23 @@
           <h3 class="visually-hidden">Сортировка товаров</h3>
 
           <b class="sort-header">Сортировка:</b>
-          <ul class="sort-options">
-            <li class="sort-option-active">
-              <button type="button">По цене</button>
+          <ul class="sort-option">
+            <li>
+              <a class="sort-option-active" href="#">По цене</a>
             </li>
             <li>
-              <button type="button">По типу</button>
+              <a href="#">По типу</a>
             </li>
             <li>
-              <button type="button">По популярности</button>
+              <a href="#">По популярности</a>
             </li>
           </ul>
           <ul class="sort-direction">
             <li>
-              <button type="button" aria-label="По возрастанию"></button>
+              <a href="#" aria-label="По возрастанию"></a>
             </li>
-            <li class="sort-direction-active">
-              <button type="button" aria-label="По убыванию"></button>
+            <li>
+              <a class="sort-direction-active" href="#" aria-label="По убыванию"></a>
             </li>
           </ul>
         </article>
@@ -319,11 +321,11 @@
         <!-- Пагинатор -->
 
         <ul class="catalog-pagination">
-          <li>
-            <a class="paginator-btn" href="#">Назад</a>
+          <li class="paginator-btn">
+            <a href="#">Назад</a>
           </li>
           <li>
-            <a class="pagination-page" href="#">1</a>
+            <a class="pagination-page page-active" href="#">1</a>
           </li>
           <li>
             <a class="pagination-page" href="#">2</a>
@@ -331,8 +333,8 @@
           <li>
             <a class="pagination-page" href="#">3</a>
           </li>
-          <li>
-            <a class="paginator-btn" href="#">Вперед</a>
+          <li class="paginator-btn">
+            <a href="#">Вперед</a>
           </li>
         </ul>
 
@@ -346,42 +348,42 @@
   <footer class="page-footer">
     <div class="container">
 
-      <article class="footer-top">
-        <h2 class="footer-logo">DEVICE</h2>
-        <div class="flex-wrap">
+      <div class="footer-top">
+        <a class="footer-logo logo-active" href="index.html">DEVICE</a>
+        <div class="user-box">
           <ul class="user-navigation">
             <li>
-              <a class="user-name" href="#">
-              <span class="login-icon-footer">
-                <svg>
-                  <use xlink:href="#login-icon"/>
-                </svg>
-              </span>Валентин Петухов</a>
+              <a class="user-name user-footer" href="#">
+                <span class="login-icon">
+                  <svg>
+                    <use xlink:href="#login-icon"/>
+                  </svg>
+                </span>Валентин Петухов</a>
             </li>
             <li>
               <a class="logout-btn" href="#">Выйти</a>
             </li>
           </ul>
           <p class="compare">
-            <a class="compare-btn-footer" href="#">
-               <span class="compare-icon-footer">
+            <a class="compare-btn compare-footer" href="#">
+              <span class="compare-icon">
                 <svg>
                   <use xlink:href="#compare-icon"/>
                 </svg>
               </span>Сравнить</a>
           </p>
           <p class="cart">
-            <a class="cart-btn-footer" href="#">
-            <span class="cart-icon-footer">
+            <a class="cart-btn cart-footer" href="#">
+            <span class="cart-icon">
                 <svg>
                   <use xlink:href="#cart-icon"/>
                 </svg>
               </span>Корзина</a>
           </p>
         </div>
-      </article>
+      </div>
 
-      <article class="footer-middle">
+      <div class="footer-middle">
         <address class="address">г. Москва, ул. Строителей, 15</address>
         <ul class="services-list services-footer">
           <li>
@@ -395,9 +397,9 @@
           </li>
         </ul>
         <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
-      </article>
+      </div>
 
-      <article class="footer-bottom">
+      <div class="footer-bottom">
         <ul class="footer-social">
           <li>
             <a class="social-btn social-fb" href="#" aria-label="Facebook">
@@ -421,7 +423,7 @@
             </a>
           </li>
         </ul>
-        <div class="footer-copyright">
+        <p class="footer-copyright">
           <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1">
             <span class="htmlacademy-logo">
               <svg>
@@ -429,8 +431,8 @@
               </svg>
             </span>
           </a>
-        </div>
-      </article>
+        </p>
+      </div>
 
     </div>
   </footer>

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>DEVICE</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -91,10 +92,10 @@
         <form class="page-search" method="post" action="https://echo.htmlacademy.ru">
           <label class="search-icon" for="search-field" aria-label="Поиск по сайту"></label>
           <input class="search-field" type="search" name="search-query" id="search-field" placeholder="Поиск по сайту">
-          <button class="search-btn" type="submit">Найти</button>
+          <button class="search-btn" type="submit" tabindex="-1">Найти</button>
         </form>
 
-        <div class="flex-wrap">
+        <div class="user-box">
           <ul class="user-navigation">
             <li>
               <a class="login-btn" href="#">
@@ -187,9 +188,9 @@
             </div>
             <div class="slide-info">
               <span class="slide-number">01</span>
-              <b class="slide-heading">Делай селфи, как Бен&nbsp;Стиллер!</b>
+              <b class="slide-heading">Делай селфи, как&nbsp;Бен&nbsp;Стиллер!</b>
               <p class="slide-description">
-                Самая длинная палка для селфи доступна в&nbsp;нашем магазине. Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;килограмм.
+                Самая длинная палка для селфи доступна в&nbsp;нашем магазине.<br>Восемь (Восемь, Карл!) метров длиной и&nbsp;весом всего 5&nbsp;килограмм.
               </p>
               <a class="btn about-btn" href="#">Подробнее</a>
               <table class="parameters">
@@ -213,7 +214,7 @@
             </div>
             <div class="slide-info">
               <span class="slide-number">02</span>
-              <b class="slide-heading">Худеем правильно!</b>
+              <b class="slide-heading">Худеем<br>правильно!</b>
               <p class="slide-description">
                 Мотивирующие фитнес-браслеты помогут найти в&nbsp;себе силы не&nbsp;пропускать занятия и&nbsp;соблюдать диету.
               </p>
@@ -235,7 +236,7 @@
             </div>
             <div class="slide-info">
               <span class="slide-number">03</span>
-              <b class="slide-heading">Порхает как бабочка, жалит как пчела!</b>
+              <b class="slide-heading">Порхает&nbsp;как&nbsp;бабочка, жалит как&nbsp;пчела!</b>
               <p class="slide-description">
                 Этот обычный, на&nbsp;первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
@@ -439,13 +440,13 @@
   <footer class="page-footer">
     <div class="container">
 
-      <article class="footer-top">
-        <h2 class="footer-logo">DEVICE</h2>
-        <div class="flex-wrap">
+      <div class="footer-top">
+        <a class="footer-logo">DEVICE</a>
+        <div class="user-box">
           <ul class="user-navigation">
             <li>
-              <a class="login-btn-footer" href="#">
-               <span class="login-icon-footer">
+              <a class="login-btn login-footer" href="#">
+               <span class="login-icon">
                 <svg>
                   <use xlink:href="#login-icon"/>
                 </svg>
@@ -453,25 +454,25 @@
             </li>
           </ul>
           <p class="compare">
-            <a class="compare-btn-footer" href="#">
-               <span class="compare-icon-footer">
+            <a class="compare-btn compare-footer" href="#">
+               <span class="compare-icon">
                 <svg>
                   <use xlink:href="#compare-icon"/>
                 </svg>
               </span>Сравнить</a>
           </p>
           <p class="cart">
-            <a class="cart-btn-footer" href="#">
-            <span class="cart-icon-footer">
+            <a class="cart-btn cart-footer" href="#">
+              <span class="cart-icon">
                 <svg>
                   <use xlink:href="#cart-icon"/>
                 </svg>
               </span>Корзина</a>
           </p>
         </div>
-      </article>
+      </div>
 
-      <article class="footer-middle">
+      <div class="footer-middle">
         <address class="address">г. Москва, ул. Строителей, 15</address>
         <ul class="services-list services-footer">
           <li>
@@ -485,9 +486,9 @@
           </li>
         </ul>
         <a class="telephone" href="tel:74954959595">Тел.: +7 (495) 495-95-95</a>
-      </article>
+      </div>
 
-      <article class="footer-bottom">
+      <div class="footer-bottom">
         <ul class="footer-social">
           <li>
             <a class="social-btn social-fb" href="#" aria-label="Facebook">
@@ -511,7 +512,7 @@
             </a>
           </li>
         </ul>
-        <div class="footer-copyright">
+        <p class="footer-copyright">
           <a class="htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1">
             <span class="htmlacademy-logo">
               <svg>
@@ -519,8 +520,8 @@
               </svg>
             </span>
           </a>
-        </div>
-      </article>
+        </p>
+      </div>
 
     </div>
   </footer>
@@ -529,13 +530,13 @@
   <div class="container">
     <section class="popup-window">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <button class="close-btn" type="button">Закрыть</button>
+      <button class="close-btn" type="button" aria-label="Закрыть"></button>
       <form class="popup-form" method="post" action="https://echo.htmlacademy.ru">
-        <p class="half-width">
+        <p class="user-input">
           <label class="popup-label" for="popup-name">Ваше имя:</label>
           <input type="text" name="popup-name" id="popup-name" placeholder="Имя Фамилия" required>
         </p>
-        <p class="half-width">
+        <p class="user-input">
           <label class="popup-label" for="popup-email">Ваш e-mail:</label>
           <input type="email" name="popup-email" id="popup-email" placeholder="email@example.com" required>
         </p>
@@ -551,7 +552,7 @@
 
     <section class="map-popup">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <button class="close-btn" type="button">Закрыть</button>
+      <button class="close-btn" type="button" aria-label="Закрыть"></button>
       <div class="map">
         <!-- iframe -->
         <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">

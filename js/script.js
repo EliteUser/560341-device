@@ -4,20 +4,24 @@
 
 var mainSliderLink = document.querySelectorAll(".about-btn");
 
-for (let i = 0; i < mainSliderLink.length; i++) {
-  mainSliderLink[i].addEventListener("focus", function () {
+for (var i = 0; i < mainSliderLink.length; i++)(function (i) {
+
+  mainSliderLink[i].addEventListener("focus", function () {    
     document.querySelector(".main-slider-inner").scrollLeft = 0;
-    document.getElementById( "slider-btn-" + (i + 1) ).checked = true;
+    document.getElementById("slider-btn-" + (i + 1)).checked = true;
   });
-}
+  
+})(i);
 
 /* Слайдер с услугами */
 
-var servicesSlider = document.querySelectorAll(".services-btn");
+var servicesSliderLink = document.querySelectorAll(".services-btn");
 
-for (let i = 0; i < servicesSlider.length; i++) {
-  servicesSlider[i].addEventListener("focus", function () {
+for (let i = 0; i < servicesSliderLink.length; i++)(function (i) {
+  
+  servicesSliderLink[i].addEventListener("focus", function () {
     document.querySelector(".services-slider-inner").scrollLeft = 0;
-    document.getElementById( "services-btn-" + (i + 1) ).checked = true;
+    document.getElementById("services-btn-" + (i + 1)).checked = true;
   });
-}
+  
+})(i);
