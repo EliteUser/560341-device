@@ -161,6 +161,7 @@
     </div>
 
     <!-- Фильтр -->
+
     <div class="container main-catalog-box">
       <section class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
@@ -169,49 +170,60 @@
         <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
           <div class="filter-price">
             <b>Стоимость</b>
-            <!-- Ползунок -->
+            <div class="slider" id="slider">
+              <div class="drag drag-left" id="drag-left">
+                <div class="drag-info">от&nbsp;0</div>
+              </div>
+              <div class="drag drag-right" id="drag-right">
+                <div class="drag-info">до&nbsp;5000</div>
+              </div>
+              <div class="selected-area"></div>
+            </div>
           </div>
 
-          <fieldset class="filter-color">
-            <legend>Цвет</legend>
-            <ul class="filter-color-list">
-              <li>
-                <input class="filter-color-input" type="checkbox" name="black" id="filter-black">
-                <label for="filter-black">Черный</label>
-              </li>
-              <li>
-                <input class="filter-color-input" type="checkbox" name="white" id="filter-white">
-                <label for="filter-white">Белый</label>
-              </li>
-              <li>
-                <input class="filter-color-input" type="checkbox" name="blue" id="filter-blue">
-                <label for="filter-blue">Синий</label>
-              </li>
-              <li>
-                <input class="filter-color-input" type="checkbox" name="red" id="filter-red">
-                <label for="filter-red">Красный</label>
-              </li>
-              <li>
-                <input class="filter-color-input" type="checkbox" name="pink" id="filter-pink">
-                <label for="filter-pink">Розовый</label>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="fieldset-box">
+            <fieldset class="filter-color">
+              <legend>Цвет</legend>
+              <ul class="filter-color-list">
+                <li>
+                  <input class="filter-color-input" type="checkbox" name="black" id="filter-black">
+                  <label for="filter-black" tabindex="0">Черный</label>
+                </li>
+                <li>
+                  <input class="filter-color-input" type="checkbox" name="white" id="filter-white">
+                  <label for="filter-white" tabindex="0">Белый</label>
+                </li>
+                <li>
+                  <input class="filter-color-input" type="checkbox" name="blue" id="filter-blue">
+                  <label for="filter-blue" tabindex="0">Синий</label>
+                </li>
+                <li>
+                  <input class="filter-color-input" type="checkbox" name="red" id="filter-red">
+                  <label for="filter-red" tabindex="0">Красный</label>
+                </li>
+                <li>
+                  <input class="filter-color-input" type="checkbox" name="pink" id="filter-pink">
+                  <label for="filter-pink" tabindex="0">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
 
-          <fieldset class="filter-bluetooth">
-            <legend>Bluetooth</legend>
-            <ul class="filter-bluetooth-list">
-              <li>
-                <input class="visually-hidden filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth-true" value="true">
-                <label for="bluetooth-true">Есть</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth-false" value="false">
-                <label for="bluetooth-false">Нет</label>
-              </li>
-            </ul>
-          </fieldset>
-
+          <div class="fieldset-box">
+            <fieldset class="filter-bluetooth">
+              <legend>Bluetooth</legend>
+              <ul class="filter-bluetooth-list">
+                <li>
+                  <input class="filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth-true" value="true">
+                  <label for="bluetooth-true" tabindex="0">Есть</label>
+                </li>
+                <li>
+                  <input class="filter-bluetooth-input" type="radio" name="bluetooth" id="bluetooth-false" value="false">
+                  <label for="bluetooth-false" tabindex="0">Нет</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <button class="btn filter-btn" type="submit">Показать</button>
         </form>
       </section>
@@ -240,10 +252,10 @@
           </ul>
           <ul class="sort-direction">
             <li>
-              <a href="#" aria-label="По возрастанию"></a>
+              <a class="sort-up" href="#" aria-label="По возрастанию"></a>
             </li>
             <li>
-              <a class="sort-direction-active" href="#" aria-label="По убыванию"></a>
+              <a class="sort-down sort-direction-active" href="#" aria-label="По убыванию"></a>
             </li>
           </ul>
         </article>
@@ -253,7 +265,7 @@
             <div class="catalog-item-image">
               <img src="img/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <div class="catalog-item-hover">
-                <a class="btn add-to-card-btn" href="#">В корзину</a>
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
                 <a class="add-to-compare" href="#">Добавить к сравнению</a>
               </div>
             </div>
@@ -270,14 +282,14 @@
             <div class="catalog-item-image">
               <img src="img/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <div class="catalog-item-hover">
-                <a class="btn add-to-card-btn" href="#">В корзину</a>
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
                 <a class="add-to-compare" href="#">Добавить к сравнению</a>
               </div>
             </div>
 
             <div class="catalog-item-info">
               <a class="catalog-item-name" href="#">
-                <h3>Профессиональная селфи-палка</h3>
+                <h3>Профессиональная<br>селфи-палка</h3>
               </a>
               <b>1 500 руб.</b>
             </div>
@@ -287,7 +299,7 @@
             <div class="catalog-item-image">
               <img src="img/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <div class="catalog-item-hover">
-                <a class="btn add-to-card-btn" href="#">В корзину</a>
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
                 <a class="add-to-compare" href="#">Добавить к сравнению</a>
               </div>
             </div>
@@ -304,7 +316,7 @@
             <div class="catalog-item-image item-new">
               <img src="img/product-4.jpg" width="360" height="380" alt="Селфи-палка &laquo;Следуй за мной&raquo;">
               <div class="catalog-item-hover">
-                <a class="btn add-to-card-btn" href="#">В корзину</a>
+                <a class="btn add-to-cart-btn" href="#">В корзину</a>
                 <a class="add-to-compare" href="#">Добавить к сравнению</a>
               </div>
             </div>
@@ -340,6 +352,7 @@
 
       </section>
     </div>
+
 
   </main>
 
@@ -437,7 +450,7 @@
     </div>
   </footer>
 
-
+  <script src="js/script.js"></script>
 </body>
 
 </html>
