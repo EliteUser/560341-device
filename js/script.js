@@ -1,27 +1,41 @@
-/* Для навигации по слайдам с помощью TAB */
+/* Переменные */
 
+var mainSliderLinks = document.querySelectorAll(".about-btn");
+var servicesSliderLinks = document.querySelectorAll(".services-btn");
+
+var popups = document.querySelectorAll(".popup-window");
+var openBtns = document.querySelectorAll(".open-btn");
+var closeBtns = document.querySelectorAll(".close-btn");
+
+var popupForm = document.querySelector(".popup-form");
+var popupSendBtn = document.querySelector(".popup-btn");
+
+var mapSmall = document.querySelector("#smallmap");
+var map = document.querySelector("#bigmap");
+
+var sliderElem = document.querySelector("#slider");
+
+var catalogList = document.querySelector(".main-catalog");
+
+/* Для навигации по слайдам с помощью TAB */
 /* Главный слайдер */
 
-var mainSliderLink = document.querySelectorAll(".about-btn");
+for (var i = 0; i < mainSliderLinks.length; i++)(function (i) {
 
-for (var i = 0; i < mainSliderLink.length; i++)(function (i) {
-
-  mainSliderLink[i].addEventListener("focus", function (event) {
+  mainSliderLinks[i].addEventListener("focus", function (event) {
     document.querySelector(".main-slider-inner").scrollLeft = 0;
-    document.getElementById("slider-btn-" + (i + 1)).checked = true;
+    document.querySelector("#slider-btn-" + (i + 1)).checked = true;
   });
 
 })(i);
 
-/* Слайдер с услугами */
+/* и слайдер с услугами */
 
-var servicesSliderLink = document.querySelectorAll(".services-btn");
+for (var i = 0; i < servicesSliderLinks.length; i++)(function (i) {
 
-for (var i = 0; i < servicesSliderLink.length; i++)(function (i) {
-
-  servicesSliderLink[i].addEventListener("focus", function (event) {
+  servicesSliderLinks[i].addEventListener("focus", function (event) {
     document.querySelector(".services-slider-inner").scrollLeft = 0;
-    document.getElementById("services-btn-" + (i + 1)).checked = true;
+    document.querySelector("#services-btn-" + (i + 1)).checked = true;
   });
 
 })(i);
@@ -30,7 +44,7 @@ for (var i = 0; i < servicesSliderLink.length; i++)(function (i) {
 
 function windowPopup(open, window, close) {
   open.addEventListener("click", function (event) {
-    event.preventDefault(event);
+    event.preventDefault();
     window.classList.add("show");
     window.classList.remove("animate-appear");
     void window.offsetWidth;
@@ -38,23 +52,16 @@ function windowPopup(open, window, close) {
   });
 
   close.addEventListener("click", function (event) {
-    event.preventDefault(event);
+    event.preventDefault();
     window.classList.remove("show");
   });
 }
 
-var popup = document.querySelectorAll(".popup-window");
-var openBtn = document.querySelectorAll(".open-btn");
-var closeBtn = document.querySelectorAll(".close-btn");
-
-for (var i = 0; i < popup.length; i++) {
-  windowPopup(openBtn[i], popup[i], closeBtn[i]);
+for (var i = 0; i < popups.length; i++) {
+  windowPopup(openBtns[i], popups[i], closeBtns[i]);
 };
 
 /* Упрощенная валидация формы */
-
-var popupForm = document.querySelector(".popup-form");
-var popupSendBtn = document.querySelector(".popup-btn");
 
 if (popupForm) {
   popupSendBtn.addEventListener("click", function checkValidity() {
@@ -63,9 +70,9 @@ if (popupForm) {
     for (var i = 0; i < inputs.length; i++) {
       if (inputs[i].validity.valid == false) {
         inputs[i].classList.add("input-invalid");
-        popup[1].classList.remove("animate-invalid");
-        void popup[1].offsetWidth;
-        popup[1].classList.add("animate-invalid");
+        popups[1].classList.remove("animate-invalid");
+        void popups[1].offsetWidth;
+        popups[1].classList.add("animate-invalid");
       } else {
         inputs[i].classList.remove("input-invalid");
       }
@@ -75,14 +82,12 @@ if (popupForm) {
 
 /* Fallback для карты */
 
-var mapSmall = document.getElementById("smallmap");
 if (mapSmall) {
   mapSmall.onload = function () {
     mapSmall.style.zIndex = 2;
   };
 }
 
-var map = document.getElementById("bigmap");
 if (map) {
   map.onload = function () {
     map.style.zIndex = 2;
@@ -90,8 +95,6 @@ if (map) {
 }
 
 /* СЛАЙДЕР В КАТАЛОГЕ */
-
-var sliderElem = document.getElementById("slider");
 
 if (sliderElem) {
   var dragElemLeft = sliderElem.children[0];
@@ -181,8 +184,6 @@ if (sliderElem) {
 }
 
 /* Фокус на карточке товара в каталоге */
-
-var catalogList = document.querySelector(".main-catalog");
 
 if (catalogList) {
   catalogList.addEventListener("focus", function (event) {
