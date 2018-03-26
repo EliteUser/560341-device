@@ -46,27 +46,35 @@ for (var i = 0; i < servicesSliderLinks.length; i++)(function (i) {
 
 /* Добавления событий для всплывающих окон */
 
-mapOpen.addEventListener("click", function (event) {
-  event.preventDefault();
-  mapPopup.classList.add("show");
-  mapClose.focus();
-});
+if (mapOpen) {
+  mapOpen.addEventListener("click", function (event) {
+    event.preventDefault();
+    mapPopup.classList.add("show");
+    mapClose.focus();
+  });
+}
 
-mapClose.addEventListener("click", function (event) {
-  event.preventDefault();
-  mapPopup.classList.remove("show");
-});
+if (mapClose) {
+  mapClose.addEventListener("click", function (event) {
+    event.preventDefault();
+    mapPopup.classList.remove("show");
+  });
+}
 
-formOpen.addEventListener("click", function (event) {
-  event.preventDefault();
-  formPopup.classList.add("show");
-  popupForm.elements[0].focus();
-});
+if (formOpen) {
+  formOpen.addEventListener("click", function (event) {
+    event.preventDefault();
+    formPopup.classList.add("show");
+    popupForm.elements[0].focus();
+  });
+}
 
-formClose.addEventListener("click", function (event) {
-  event.preventDefault();
-  formPopup.classList.remove("show");
-});
+if (formOpen) {
+  formClose.addEventListener("click", function (event) {
+    event.preventDefault();
+    formPopup.classList.remove("show");
+  });
+}
 
 
 /* Упрощенная валидация формы */
@@ -106,8 +114,8 @@ if (map) {
 /* СЛАЙДЕР В КАТАЛОГЕ */
 
 if (sliderElem) {
-  var dragElemLeft = sliderElem.children[0];
-  var dragElemRight = sliderElem.children[1];
+  var dragElemLeft = document.querySelector(".drag-left");
+  var dragElemRight = document.querySelector(".drag-right");
   var selectedArea = sliderElem.children[2];
 
   function getCoords(elem) {
