@@ -3,9 +3,13 @@
 var mainSliderLinks = document.querySelectorAll(".about-btn");
 var servicesSliderLinks = document.querySelectorAll(".services-btn");
 
-var popups = document.querySelectorAll(".popup-window");
-var openBtns = document.querySelectorAll(".open-btn");
-var closeBtns = document.querySelectorAll(".close-btn");
+var mapPopup = document.querySelector(".map-popup");
+var mapOpen = document.querySelector("#map-open");
+var mapClose = document.querySelector("#map-close");
+
+var formPopup = document.querySelector(".form-popup");
+var formOpen = document.querySelector("#popup-open");
+var formClose = document.querySelector("#popup-close");
 
 var popupForm = document.querySelector(".popup-form");
 var popupSendBtn = document.querySelector(".popup-btn");
@@ -40,39 +44,44 @@ for (var i = 0; i < servicesSliderLinks.length; i++)(function (i) {
 
 })(i);
 
-/* Добавления события для всплывающего окна */
+/* Добавления событий для всплывающих окон */
 
-function windowPopup(open, window, close) {
-  open.addEventListener("click", function (event) {
-    event.preventDefault();
-    window.classList.add("show");
-    window.classList.remove("animate-appear");
-    void window.offsetWidth;
-    window.classList.add("animate-appear");
-  });
+mapOpen.addEventListener("click", function (event) {
+  event.preventDefault();
+  mapPopup.classList.add("show");
+  mapClose.focus();
+});
 
-  close.addEventListener("click", function (event) {
-    event.preventDefault();
-    window.classList.remove("show");
-  });
-}
+mapClose.addEventListener("click", function (event) {
+  event.preventDefault();
+  mapPopup.classList.remove("show");
+});
 
-for (var i = 0; i < popups.length; i++) {
-  windowPopup(openBtns[i], popups[i], closeBtns[i]);
-};
+formOpen.addEventListener("click", function (event) {
+  event.preventDefault();
+  formPopup.classList.add("show");
+  popupForm.elements[0].focus();
+});
+
+formClose.addEventListener("click", function (event) {
+  event.preventDefault();
+  formPopup.classList.remove("show");
+});
+
 
 /* Упрощенная валидация формы */
 
 if (popupForm) {
-  popupSendBtn.addEventListener("click", function checkValidity() {
-    var inputs = [popupForm.elements.name, popupForm.elements.email, popupForm.elements.message];
+  popupForm.addEventListener("submit", function checkValidity(event) {
+    var inputs = [popupForm.elements.name, popupForm.elements.email];
 
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].validity.valid == false) {
+      if (!inputs[i].value || !inputs[i].validity.valid) {
+        event.preventDefault();
         inputs[i].classList.add("input-invalid");
-        popups[1].classList.remove("animate-invalid");
-        void popups[1].offsetWidth;
-        popups[1].classList.add("animate-invalid");
+        formPopup.classList.remove("animate-invalid");
+        formPopup.offsetWidth = popupForm.offsetWidth;
+        formPopup.classList.add("animate-invalid");
       } else {
         inputs[i].classList.remove("input-invalid");
       }

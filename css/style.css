@@ -2349,6 +2349,12 @@ input.input-invalid:hover {
 
 .show {
   display: block;
+  -webkit-animation-name: popup-appear;
+  animation-name: popup-appear;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes popup-appear {
@@ -2371,15 +2377,6 @@ input.input-invalid:hover {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-}
-
-.animate-appear {
-  -webkit-animation-name: popup-appear;
-  animation-name: popup-appear;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes popup-invalid {
