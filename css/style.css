@@ -1637,6 +1637,10 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.sort-option a:active {
+  color: #000000;
+}
+
 .sort-option .sort-option-active {
   color: #000000;
 }
@@ -1681,6 +1685,14 @@ a {
   border-bottom-color: rgba(0, 0, 0, 0.4);
 }
 
+.sort-up:active::before {
+  border-bottom-color: #231f20;
+}
+
+.sort-up.sort-direction-active::before {
+  border-bottom-color: #231f20;
+}
+
 .sort-down::before {
   border-width: 10px 5.5px 0 5.5px;
   border-top-color: rgba(0, 0, 0, 0.2);
@@ -1690,12 +1702,12 @@ a {
   border-top-color: rgba(0, 0, 0, 0.4);
 }
 
-.sort-up.sort-direction-active::before {
-  border-bottom-color: #000000;
+.sort-down:active::before {
+  border-top-color: #231f20;
 }
 
 .sort-down.sort-direction-active::before {
-  border-top-color: #000000;
+  border-top-color: #231f20;
 }
 
 .main-catalog {
