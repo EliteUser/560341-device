@@ -44,7 +44,7 @@ for (var i = 0; i < servicesSliderLinks.length; i++)(function (i) {
 
 })(i);
 
-/* Добавления событий для всплывающих окон */
+/* Добавление событий для всплывающих окон */
 
 if (mapOpen) {
   mapOpen.addEventListener("click", function (event) {
@@ -73,6 +73,7 @@ if (formOpen) {
   formClose.addEventListener("click", function (event) {
     event.preventDefault();
     formPopup.classList.remove("show");
+    formWindow.classList.remove("animate-invalid");
   });
 }
 
@@ -88,7 +89,7 @@ if (popupForm) {
         event.preventDefault();
         inputs[i].classList.add("input-invalid");
         formPopup.classList.remove("animate-invalid");
-        formPopup.offsetWidth = popupForm.offsetWidth;
+        formPopup.offsetWidth = formPopup.offsetWidth;
         formPopup.classList.add("animate-invalid");
       } else {
         inputs[i].classList.remove("input-invalid");
